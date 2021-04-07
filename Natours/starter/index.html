@@ -16,6 +16,32 @@
 		<title>Natours | Exciting tours for adventurous people</title>
 	</head>
 	<body>
+		<div class="navigation">
+			<input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+			<label for="navi-toggle" class="navigation__button">
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+			<div class="navigation__background">&nbsp;</div>
+			<nav class="navigation__nav">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">About Natours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Your Benefits</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Popular tours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Stories</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Book Now</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 		<header class="header">
 			<div class="header__logo-box">
 				<img class="header__logo" src="./img/logo-white.png" alt="logo" />
@@ -158,7 +184,7 @@
 										<p class="card__price-only">Only</p>
 										<p class="card__price-value">$297</p>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
@@ -229,6 +255,13 @@
 				</div>
 			</section>
 			<section class="section-stories">
+				<div class="bg-video">
+					<video class="bg-video__content" muted loop>
+						<source src="./img/video.mp4" type="video/mp4" />
+						<source src="./img/video.webm" type="video.webm" />
+						Your browser is not supported
+					</video>
+				</div>
 				<div class="u-center-text u-margin-bottom-big">
 					<h2 class="heading-secondary">We make people genuinely happy</h2>
 				</div>
@@ -286,7 +319,141 @@
 					<a href="#" class="btn-text">Discover all tours &rarr;</a>
 				</div>
 			</section>
+			<section class="section-book">
+				<div class="row">
+					<div class="book">
+						<div class="book__form">
+							<form class="form">
+								<div class="u-margin-bottom-big u-margin-bottom-medium">
+									<h2 class="heading-secondary">Start Booking now</h2>
+								</div>
+								<div class="form__group">
+									<input
+										type="text"
+										placeholder="Full Name"
+										class="form__input"
+										id="name"
+										required
+									/>
+									<label for="name" class="form__label">Full Name</label>
+								</div>
+								<div class="form__group">
+									<input
+										type="email"
+										placeholder="Email Address"
+										class="form__input"
+										id="email"
+										required
+									/>
+									<label for="email" class="form__label">Email Address</label>
+								</div>
+								<div class="form__group u-margin-bottom-medium">
+									<div class="form__radio-group">
+										<input
+											class="form__radio-input"
+											type="radio"
+											id="small"
+											name="size"
+										/>
+										<label for="small" class="form__radio-label">
+											<span class="form__radio-button"></span>
+											Small tour group
+										</label>
+									</div>
+									<div class="form__radio-group">
+										<input
+											class="form__radio-input"
+											type="radio"
+											id="large"
+											name="size"
+										/>
+										<label for="large" class="form__radio-label"
+											><span class="form__radio-button"></span> Large tour group
+										</label>
+									</div>
+								</div>
+								<div class="form__group">
+									<button class="btn btn--green">Next step &rarr;</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+		<footer class="footer">
+			<div class="footer__logo-box">
+				<img
+					src="./img/logo-green-2x.png"
+					alt="Full logo"
+					class="footer__logo"
+				/>
+			</div>
+			<div class="row">
+				<div class="col-1-of-2">
+					<div class="footer__navigation">
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="3" class="footer__link">Company</a>
+							</li>
+							<li class="footer__item">
+								<a href="3" class="footer__link">Contact us</a>
+							</li>
+							<li class="footer__item">
+								<a href="3" class="footer__link">Careers</a>
+							</li>
+							<li class="footer__item">
+								<a href="3" class="footer__link">Privacy</a>
+							</li>
+							<li class="footer__item">
+								<a href="3" class="footer__link">Terms</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-1-of-2">
+					<p class="footer__copyright">
+						Built by <a href="#" class="footer__link">Joshua Palmer</a> for his
+						online course
+						<a href="#" class="footer__link">Advanced CSS and Sass</a>.
+						Copyright &copy; by Joshua Palmer. You are 100% allowed to use this
+						webpage for both personal and commercial use, but NOT to claim it as
+						your own design. A credit to the orginal author, Joshua Palmer, is
+						of course highly appreciated!
+					</p>
+				</div>
+			</div>
+		</footer>
+		<div class="popup" id="popup">
+			<div class="popup__content">
+				<div class="popup__left">
+					<img class="popup__img" src="./img/nat-8.jpg" alt="Tour photo" />
+					<img class="popup__img" src="./img/nat-9.jpg" alt="Tour photo" />
+				</div>
+				<div class="popup__right">
+					<a href="#section-tours" class="popup__close">&times;</a>
+					<h2 class="heading-secondary u-margin-bottom-small">
+						Start booking now
+					</h2>
+					<h3 class="heading-tertiary u-margin-bottom-small">
+						Important &ndash; Please read these terms before booking
+					</h3>
+					<p class="popup__text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+						autem maiores ducimus asperiores voluptatem id, iure molestiae culpa
+						illo labore adipisci nostrum optio facilis magnam dolorum accusamus
+						mollitia quod dignissimos! Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Facilis totam ipsam necessitatibus eius itaque ea
+						sunt, odit vero earum quod voluptatibus reprehenderit amet iusto. Ex
+						quisquam molestias assumenda alias! Odio. Lorem ipsum dolor sit amet
+						consectetur, adipisicing elit. Commodi autem tenetur ea consectetur
+						ut vitae officiis. Veniam quod numquam a dolorem! Cupiditate
+						eligendi aut veritatis quis fuga aperiam consequuntur dolorem.
+					</p>
+					<a href="#" class="btn btn--green">Book now</a>
+				</div>
+			</div>
+		</div>
 		<!-- <section class="grid-test">
 			<div class="row">
 				<div class="col-1-of-2">Col 1 of 2</div>
