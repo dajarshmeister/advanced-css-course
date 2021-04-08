@@ -8,9 +8,8 @@
 			href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./css/icon-font.css" />
-		<link rel="stylesheet" href="css/icon-font.css" />
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./dist/icon-font.css" />
+		<link rel="stylesheet" href="./dist/css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
 		<title>Natours | Exciting tours for adventurous people</title>
@@ -44,7 +43,7 @@
 		</div>
 		<header class="header">
 			<div class="header__logo-box">
-				<img class="header__logo" src="./img/logo-white.png" alt="logo" />
+				<img class="header__logo" src="./dist/img/logo-white.png" alt="logo" />
 			</div>
 			<div class="header__text-box">
 				<h1 class="heading-primary">
@@ -86,15 +85,15 @@
 					<div class="col-1-of-2">
 						<div class="composition">
 							<img
-								src="./img/nat-1-large.jpg"
+								src="./dist/img/nat-1-large.jpg"
 								alt="Photo 1"
 								class="composition__photo composition__photo--p1"
 							/><img
-								src="./img/nat-2-large.jpg"
+								src="./dist/img/nat-2-large.jpg"
 								alt="Photo 2"
 								class="composition__photo composition__photo--p2"
 							/><img
-								src="./img/nat-3-large.jpg"
+								src="./dist/img/nat-3-large.jpg"
 								alt="Photo 3"
 								class="composition__photo composition__photo--p3"
 							/>
@@ -257,8 +256,8 @@
 			<section class="section-stories">
 				<div class="bg-video">
 					<video class="bg-video__content" muted loop>
-						<source src="./img/video.mp4" type="video/mp4" />
-						<source src="./img/video.webm" type="video.webm" />
+						<source src="./dist/img/video.mp4" type="video/mp4" />
+						<source src="./dist/img/video.webm" type="video.webm" />
 						Your browser is not supported
 					</video>
 				</div>
@@ -270,7 +269,7 @@
 						<figure class="story__shape">
 							<img
 								class="story__img"
-								src="img/nat-8.jpg"
+								src="./dist/img/nat-8.jpg"
 								alt="Person on a tour"
 							/>
 							<figcaption class="story__caption">Mary Smith</figcaption>
@@ -295,7 +294,7 @@
 						<figure class="story__shape">
 							<img
 								class="story__img"
-								src="img/nat-9.jpg"
+								src="./dist/img/nat-9.jpg"
 								alt="Person on a tour"
 							/>
 							<figcaption class="story__caption">Jack Wilson</figcaption>
@@ -383,11 +382,22 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__logo-box">
-				<img
-					src="./img/logo-green-2x.png"
-					alt="Full logo"
-					class="footer__logo"
-				/>
+				<picture class="footer__logo">
+					<source
+						srcset="
+							./dist/img/logo-green-small-1x.png 1x,
+							./dist/img/logo-green-small-2x.png 2x
+						"
+						media="(max-width: 37.5em)"
+					/>
+					<img
+						srcset="
+							./dist/img/logo-green-1x.png 1x,
+							./dist/img/logo-green-2x.png 2x
+						"
+						alt="Full logo"
+					/>
+				</picture>
 			</div>
 			<div class="row">
 				<div class="col-1-of-2">
@@ -427,8 +437,8 @@
 		<div class="popup" id="popup">
 			<div class="popup__content">
 				<div class="popup__left">
-					<img class="popup__img" src="./img/nat-8.jpg" alt="Tour photo" />
-					<img class="popup__img" src="./img/nat-9.jpg" alt="Tour photo" />
+					<img class="popup__img" src="./dist/img/nat-8.jpg" alt="Tour photo" />
+					<img class="popup__img" src="./dist/img/nat-9.jpg" alt="Tour photo" />
 				</div>
 				<div class="popup__right">
 					<a href="#section-tours" class="popup__close">&times;</a>
